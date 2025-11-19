@@ -1,0 +1,53 @@
+How to Run the Company Database 
+
+Software Requirements:
+- MySQL Server 8.0.+
+- MySQL Workbench 8.0+
+
+PHASE 1:
+1. Open MySQL Workbench and connect your local MySQL server.
+2. Run the script phase1_create_and_load.sql
+3. Import the Data from a .csv or .xlsx file
+	a. In the Schemas panel, click the dropdown for 'company_db' database
+	b. Click the dropdown for Tables and right-click on 'company_raw'
+	c. Select the file from the file explorer
+	d. Select Use existing table on 'company_db.company_raw' and check Truncate table before import
+	e. Select Next until import has been completed
+	f. NOTE: If the script is run again, repeat these steps to reinsert the data
+
+PHASE 2:
+1. Open phase2_normalization.sql in MySQL Workbench
+2. Run the script
+3. Verify tables are populated by opening a new query tab:
+	USE company_db;
+	SHOW TABLES;
+	SELECT COUNT(*) FROM company_raw;
+	SELECT COUNT(*) FROM customers;
+
+PHASE 3:
+1. Go to File --> Open Model
+2. Select ERD.mwb and click Open
+
+PHASE 4:
+1. Go to File --> Open SQL Script...
+2. Open phase4_table_alterations.sql
+3. Run the script
+4. Verify using MySQL Terminal: 
+	SHOW CREATE TABLE order_details;
+
+PHASE 5:
+1. Go to File --> Open SQL Script..
+2. Open <.sql file names>
+3. Run the script
+4. Verify using output:
+
+
+PHASE 6:
+1. Go to File --> Open SQL Script..
+2. Open phase6_users.sql
+3. Run the script
+4. Verify using MySQL Terminal:
+	SHOW GRANTS FOR 'AlexSmith'@'localhost';
+
+PHASE 7:
+1. ...
