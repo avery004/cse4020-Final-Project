@@ -36,19 +36,21 @@ PHASE 4:
 	SHOW CREATE TABLE order_details;
 
 PHASE 5:
-
+*SALES VIEW
 1. Go to File --> Open SQL Script..
 2. Open phase5_create_view.sql
 3. Run the script
 4. Verify the table was created correctly using:
 	SELECT * FROM company_db.employee_sales_view;
 
+*RESTOCK PROCEDURE
 5. Go to File --> Open SQL Script..
 6. Open phase5_restock_procedure.sql
 7. Run the script
 8. Verify using:
 	CALL restock_procedure.sql
 
+*TRIGGER
 9. Go to File --> Open SQL Script..
 10. Open phase5_trigger.sql
 11. Run the script
@@ -67,4 +69,25 @@ PHASE 6:
 	SHOW GRANTS FOR 'AlexSmith'@'localhost';
 
 PHASE 7:
-1. ...
+To import the database from the export:
+1. Launch MySQL Workbench.
+2. Connect to your MySQL server (e.g., Local instance MySQL80).
+3. Open the Data Import Utility
+4. Navigate to the Management section
+5. Select Data Import/Restore.
+	- Choose Import from Dump Project Folder.
+	- Click Browse and select the folder that contains your exported files.
+	- In "Default Target Schema", select your new schema (e.g., restore_test).
+	- Check Dump Structure and Data.
+6. Start the import
+7. Verify the Imported Database
+	After the import completes:
+	- Refresh the Schemas panel.
+	- Expand the restored schema.
+	Confirm:
+	- All tables are present
+	- Data appears correctly using SELECT queries (From previous phases)
+	- The trigger appears under orders table 
+	- The view appears under View tab
+	- The restock procedure appears under procedures
+	- Table structure matches the original
