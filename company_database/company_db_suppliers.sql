@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
+--
+-- Host: localhost    Database: company_db
+-- ------------------------------------------------------
+-- Server version	8.0.44
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `suppliers`
+--
+
+DROP TABLE IF EXISTS `suppliers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `suppliers` (
+  `supplierID` int NOT NULL,
+  `companyName` varchar(100) DEFAULT NULL,
+  `contactName` varchar(100) DEFAULT NULL,
+  `contactTitle` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`supplierID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `suppliers`
+--
+
+LOCK TABLES `suppliers` WRITE;
+/*!40000 ALTER TABLE `suppliers` DISABLE KEYS */;
+INSERT INTO `suppliers` VALUES (1,'Exotic Liquids','Charlotte Cooper','Purchasing Manager'),(2,'New Orleans Cajun Delights','Shelley Burke','Order Administrator'),(3,'Grandma Kelly\'s Homestead','Regina Murphy','Sales Representative'),(4,'Tokyo Traders','Yoshi Nagase','Marketing Manager'),(5,'Cooperativa de Quesos \'Las Cabras\'','Antonio del Valle Saavedra','Export Administrator'),(6,'Mayumi\'s','Mayumi Ohno','Marketing Representative'),(7,'Pavlova',' Ltd.','Ian Devling'),(8,'Specialty Biscuits',' Ltd.','Peter Wilson'),(9,'PB KnÃ¤ckebrÃ¶d AB','Lars Peterson','Sales Agent'),(10,'Refrescos Americanas LTDA','Carlos Diaz','Marketing Manager'),(11,'Heli SÃ¼ÃŸwaren GmbH & Co. KG','Petra Winkler','Sales Manager'),(12,'Plutzer LebensmittelgroÃŸmÃ¤rkte AG','Martin Bein','International Marketing Mgr.'),(13,'Nord-Ost-Fisch Handelsgesellschaft mbH','Sven Petersen','Coordinator Foreign Markets'),(14,'Formaggi Fortini s.r.l.','Elio Rossi','Sales Representative'),(15,'Norske Meierier','Beate Vileid','Marketing Manager'),(16,'Bigfoot Breweries','Cheryl Saylor','Regional Account Rep.'),(17,'Svensk SjÃ¶fÃ¶da AB','Michael BjÃ¶rn','Sales Representative'),(18,'Aux joyeux ecclÃ©siastiques','GuylÃ¨ne Nodier','Sales Manager'),(19,'New England Seafood Cannery','Robb Merchant','Wholesale Account Agent'),(20,'Leka Trading','Chandra Leka','Owner'),(21,'Lyngbysild','Niels Petersen','Sales Manager'),(22,'Zaanse Snoepfabriek','Dirk Luchte','Accounting Manager'),(23,'Karkki Oy','Anne Heikkonen','Product Manager'),(24,'G\'day',' Mate','Wendy Mackenzie'),(25,'Ma Maison','Jean-Guy Lauzon','Marketing Manager'),(26,'Pasta Buttini s.r.l.','Giovanni Giudici','Order Administrator'),(27,'Escargots Nouveaux','Marie Delamare','Sales Manager'),(28,'Gai pÃ¢turage','Eliane Noz','Sales Representative'),(29,'ForÃªts d\'Ã©rables','Chantal Goulet','Accounting Manager');
+/*!40000 ALTER TABLE `suppliers` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-12-11 18:22:53
