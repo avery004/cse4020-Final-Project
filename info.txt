@@ -29,18 +29,28 @@ PHASE 3:
 2. Select ERD.mwb and click Open
 
 PHASE 4:
-1. Go to File --> Open SQL Script...
+1. Go to File --> Open SQL Script..
 2. Open phase4_table_alterations.sql
 3. Run the script
 4. Verify using MySQL Terminal: 
 	SHOW CREATE TABLE order_details;
 
 PHASE 5:
+VIEWS:
 1. Go to File --> Open SQL Script..
-2. Open <.sql file names>
+2. Open phase5_create_view.sql
 3. Run the script
-4. Verify using output:
-
+4. Verify using SQL script <testView>
+TRIGGERS:
+1. Go to File --> Open SQL Script..
+2. Open phase5_trigger.sql
+3. Run the script
+4. Verify using SQL script <testTrigger>
+PROCEDURES:
+1. Go to File --> Open SQL Script..
+2. Open phase5_restock_procedure.sql
+3. Run the script
+4. Verify using SQL script <testProcedure>
 
 PHASE 6:
 1. Go to File --> Open SQL Script..
@@ -50,4 +60,8 @@ PHASE 6:
 	SHOW GRANTS FOR 'AlexSmith'@'localhost';
 
 PHASE 7:
-1. ...
+1. Plug external hard drive into computer
+2. Go to Data Export
+3. Select Export to Dump Project Folder --> Choose path to external hard drive
+4. Export Data
+5. Verify using local file explorer
