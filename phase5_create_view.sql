@@ -4,7 +4,7 @@ SELECT
     e.firstName AS firstName,
     e.lastName AS lastName, 
     SUM(od.quantity) AS totalQuantitySold,
-    SUM(od.quantity * od.unitPrice) AS totalRevenue
+    SUM((od.quantity * od.unitPrice) * (1-od.discount)) AS totalRevenue
 FROM employees e
 JOIN orders o 
     ON e.employeeID = o.employeeID
