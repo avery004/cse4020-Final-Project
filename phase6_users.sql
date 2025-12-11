@@ -27,3 +27,5 @@ FLUSH PRIVILEGES;
 -- SHOW GRANTS FOR 'AlexSmith'@'localhost';
 -- SHOW GRANTS FOR 'JamieLee'@'localhost';
 
+-- command to generate phase6 csv 
+-- mysql -u root --batch --skip-column-names -e "USE company_db; SELECT 'user','host'; SELECT user, host FROM mysql.user WHERE user IN ('AlexSmith','JamieLee'); SELECT 'grants'; SHOW GRANTS FOR 'AlexSmith'@'localhost'; SHOW GRANTS FOR 'JamieLee'@'localhost';" > phase6_users_verification.csv 

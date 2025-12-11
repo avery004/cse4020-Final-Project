@@ -1,0 +1,8 @@
+user	host
+AlexSmith	localhost
+JamieLee	localhost
+grants
+GRANT USAGE ON *.* TO `AlexSmith`@`localhost`
+GRANT ALL PRIVILEGES ON `company_db`.* TO `AlexSmith`@`localhost` WITH GRANT OPTION
+GRANT USAGE ON *.* TO `JamieLee`@`localhost`
+GRANT SELECT ON `company_db`.* TO `JamieLee`@`localhost`

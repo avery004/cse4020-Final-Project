@@ -36,11 +36,28 @@ PHASE 4:
 	SHOW CREATE TABLE order_details;
 
 PHASE 5:
-1. Go to File --> Open SQL Script..
-2. Open <.sql file names>
-3. Run the script
-4. Verify using output:
 
+1. Go to File --> Open SQL Script..
+2. Open phase5_create_view.sql
+3. Run the script
+4. Verify the table was created correctly using:
+	SELECT * FROM company_db.employee_sales_view;
+
+5. Go to File --> Open SQL Script..
+6. Open phase5_restock_procedure.sql
+7. Run the script
+8. Verify using:
+	CALL restock_procedure.sql
+
+9. Go to File --> Open SQL Script..
+10. Open phase5_trigger.sql
+11. Run the script
+12. Verify:  
+	- Run trigger_test.sql and view the original stock quantity --> query created to add an order to set the trigger off
+	- Run the following query to check the new stock quantity:
+		SELECT productID, productName, unitsInStock
+		FROM products
+		WHERE productID = 2;
 
 PHASE 6:
 1. Go to File --> Open SQL Script..
